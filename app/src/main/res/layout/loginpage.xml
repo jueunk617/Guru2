@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/lp_logoimageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
@@ -25,11 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/lp_logoimageview"
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/rog_webrogbtn"
+            android:id="@+id/lp_btnweblog"
             android:layout_width="360dp"
             android:layout_height="45dp"
             android:background="@drawable/roginpage_button"
