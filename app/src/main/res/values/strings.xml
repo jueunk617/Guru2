@@ -2,4 +2,39 @@
     <string name="app_name">Guru2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--채팅방 만들기 화면-->
+    <string name="tool_title">채팅방 만들기</string>
+    <string name="title">제목</string>
+    <string name="title_text">제목을 입력하세요.</string>
+    <string name="category">카테고리</string>
+    <string name="category_text">카테고리를 선택하세요.</string>
+    <string name="main_text">내용</string>
+    <string name="main_detail_text">예) 안녕하세요 기숙사 2동에 사는 슈니입니다\n같이 이디야 주문하실 분?</string>
+    <string name="pic_attach">사진 첨부</string>
+    <string name="pic_attach_text">0/5</string>
+    <string name="make">만들기</string>
+
+    <!--글 클릭_팝업창_1_글만 있는 경우-->
+    <string name="time">오후 13:30</string>
+    <string name="write_date">2023년 7월 21일</string>
+    <string name="chat_title">이디야 같이 주문하실 분?</string>
+    <string name="chat_context">안녕하세요 기숙사 2동에 사는 슈니입니다\n같이 이디야 주문하실 분?</string>
+
+    <!--글 클릭_팝업창_2_이미지까지 있는 경우-->
+    <string name="chat_title2">휴지 공구하실 분 구합니다!!</string>
+    <string name="chat_context2">쿠팡에서 4개에 32,500원 파는데 2개만\n필요해서 같이 살 사람 구해요~</string>
+
+    <string name="chat_person">1/3</string>
+    <string name="view">8</string>
+    <string name="enter_chat">채팅방 입장하기</string>
+
+    <!--채팅방 화면-->
+    <string name="notice">공지</string>
+    <string name="account_holder">예금주 : 000</string>
+    <string name="account">국민  1234 - 567 - 8900</string>
+    <string name="date">2023년 07월 20일 목요일</string>
+    <string name="sub_text">00님이 생성하신 채팅방입니다.\n대화를 시작하세요.</string>
+    <string name="chatting">메세지를 입력하세요.</string>
+    <string name="send">전송</string>
 </resources>
