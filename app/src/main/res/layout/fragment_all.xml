@@ -62,6 +62,7 @@
                 android:textSize="10sp" />
         </TableRow>
 
+<!--    이미지가 있을경우 -->
         <TableRow>
             <ImageView
                 android:id="@+id/postImageview1"

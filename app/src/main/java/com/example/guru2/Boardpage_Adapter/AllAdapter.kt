@@ -13,6 +13,7 @@ import com.example.guru2.Boardpage_Fragments.Sports
 import com.example.guru2.Boardpage_Fragments.Ticket
 import com.example.guru2.Boardpage_Fragments.Trip
 
+
 internal class AllAdapter(var context: Context, fm: FragmentManager, var totalTabs: Int): FragmentPagerAdapter(fm) {
 
 

@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/ba_tablayout"
+            android:id="@+id/bd_tablayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
@@ -78,13 +78,13 @@
             app:tabTextColor="#CCCCCC" />
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/ba_viewpage"
+            android:id="@+id/bd_viewpage"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ba_tablayout">
+            app:layout_constraintTop_toBottomOf="@+id/bd_tablayout">
 
         </androidx.viewpager.widget.ViewPager>
 
