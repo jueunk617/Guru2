@@ -14,174 +14,174 @@
         app:layout_constraintBottom_toTopOf="@+id/hp_imageview2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/hp_imageview2"
         android:layout_width="411dp"
         android:layout_height="180dp"
-        android:layout_marginTop="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homepage_banner" />
 
     <ImageView
-        android:id="@+id/hp_search"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/hp_imageview2"
-        app:layout_constraintEnd_toStartOf="@+id/hp_alaram"
-        app:layout_constraintStart_toEndOf="@+id/hp_imageview1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551"
-        tools:srcCompat="@drawable/search_icon" />
-
-    <ImageView
         android:id="@+id/hp_alaram"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/hp_imageview2"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/hp_search"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/alaram_icon" />
 
+    <TextView
+        android:id="@+id/hp_textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/notobold"
+        android:text="공동 주문을 원한다면 CLICK!"
+        android:textAlignment="viewStart"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hp_imageview2" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="166dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="367dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hp_imageview2"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/hp_textview1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/notoregular"
-            android:text="공동 주문을 원한다면 CLICK!"
-            android:textAlignment="viewStart"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/hp_btnall"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/hp_btnall"
-            android:layout_width="360dp"
-            android:layout_height="75dp"
-            android:background="@drawable/homepage_button"
-            android:backgroundTint="#D2EDB4"
-            android:fontFamily="@font/notomedium"
-            android:text="전체로 살펴보기"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hp_textview1" />
+        app:layout_constraintTop_toBottomOf="@+id/hp_textview1">
 
         <Button
             android:id="@+id/hp_btndeli"
             android:layout_width="360dp"
             android:layout_height="75dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/homepage_button"
-            android:backgroundTint="#D2EDB4"
+            android:backgroundTint="@color/grey"
             android:drawableLeft="@drawable/scooter_icon_scale"
             android:drawablePadding="-70dp"
-            android:fontFamily="@font/notomedium"
+            android:fontFamily="@font/notobold"
             android:paddingLeft="40dp"
             android:text="배달 / 주문"
             android:textSize="16sp"
+            app:layout_constraintBottom_toStartOf="@id/hp_btnorder"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hp_btnall" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/hp_btnorder"
             android:layout_width="360dp"
-            android:layout_height="75dp"
+            android:layout_height="0dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/homepage_button"
-            android:backgroundTint="#D2EDB4"
+            android:backgroundTint="@color/grey"
             android:drawableLeft="@drawable/box_icon_scale"
             android:drawablePadding="-65dp"
-            android:fontFamily="@font/notomedium"
+            android:fontFamily="@font/notobold"
             android:paddingLeft="40dp"
             android:text="공동 구매"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hp_btndeli" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="413dp"
-        android:layout_height="165dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/hp_textview2"
+        android:layout_width="128dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/notoregular"
+        android:text="오늘의 추천 공구템"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
-
-        <TextView
-            android:id="@+id/hp_textview2"
-            android:layout_width="128dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="30dp"
-            android:fontFamily="@font/notoregular"
-            android:text="오늘의 추천 공구템"
-            android:textColor="#333333"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/hp_textview2">
 
         <Button
             android:id="@+id/hp_btnbanner"
             android:layout_width="360dp"
             android:layout_height="110dp"
-            android:backgroundTint="#4A9A4D"
+            android:backgroundTint="#87E3E9"
             android:drawableRight="@drawable/homepage_pants_scale"
             android:fontFamily="@font/notoblack"
             android:gravity="top|left"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="올 여름 반바지 \n하나는 장만해야지~"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hp_textview2"
-            app:layout_constraintVertical_bias="0.0" />
+            android:textColor="@color/white" />
 
-        <TextView
-            android:id="@+id/hp_btnmore"
-            android:layout_width="36dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="30dp"
-            android:fontFamily="@font/notoregular"
-            android:text="더보기"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/hp_btnbanner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="#87E3E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/notoregular"
+                android:text="남여공용 밴딩 면 3부 반바지 \n 8,000원 \n 인원 : 6명"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/homepage_button"
+                android:backgroundTint="@color/grey"
+                android:text="참여하기"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
