@@ -170,10 +170,10 @@
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_width="104dp"
+                android:layout_height="45dp"
                 android:layout_gravity="right"
-                android:layout_marginEnd="40dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/homepage_button"
                 android:backgroundTint="@color/grey"
                 android:text="참여하기"
