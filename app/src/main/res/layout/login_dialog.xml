@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/notomedium"
         android:text="로그인"
-        android:textColor="#51CA56"
+        android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
