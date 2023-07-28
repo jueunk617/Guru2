@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="420dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/lp_memberdialog_tv1"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/notomedium"
+        android:text="서울여대 이메일로 회원가입"
+        android:textColor="#51CA56"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lp_memberdialog_tv2"
+        android:layout_width="169dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/notoregular"
+        android:text="아래에 정보를 입력해 주세요."
+        android:textColor="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_tv1" />
+
+    <TextView
+        android:id="@+id/lp_memberdialog_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/notolight"
+        android:text="* 아이디(이메일)"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_tv2" />
+
+    <EditText
+        android:id="@+id/lp_memberdialog_edtemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lp_memberdialog_tv4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_tv3" />
+
+    <TextView
+        android:id="@+id/lp_memberdialog_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/notolight"
+        android:text="* 비밀번호"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_edtemail" />
+
+    <EditText
+        android:id="@+id/lp_memberdialog_edtpw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lp_memberdialog_tv5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_tv4" />
+
+    <TextView
+        android:id="@+id/lp_memberdialog_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/notolight"
+        android:text="* 닉네임"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_edtpw" />
+
+    <EditText
+        android:id="@+id/lp_memberdialog_edtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lp_memberdialog_tv5" />
+
+    <Button
+        android:id="@+id/lp_member_btn"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/roginpage_button"
+        android:fontFamily="@font/notoregular"
+        android:text="완료"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/lp_memberdialog_closebtn"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/close" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
