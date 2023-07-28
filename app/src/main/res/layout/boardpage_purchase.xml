@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:fontFamily="@font/notoregular"
-            android:text="앱이름"
+            android:text="슈이브"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/boardpage_tv1"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/alaram_icon" />
+            tools:src="@drawable/back_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -74,19 +74,58 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicatorColor="#00FFFFFF"
             app:tabRippleColor="#00FFFFFF"
-            app:tabSelectedTextColor="#249E28"
-            app:tabTextColor="#CCCCCC" />
+            app:tabSelectedTextColor="@color/green"
+            app:tabTextColor="#CCCCCC" >
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/bp_viewpage"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bp_tablayout">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체"/>
 
-        </androidx.viewpager.widget.ViewPager>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="의류"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화장품"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="음식"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생필품"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성용품"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_purchase">
+
+        </FrameLayout>
+
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/bp_viewpage"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/bp_tablayout">-->
+
+<!--        </androidx.viewpager.widget.ViewPager>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

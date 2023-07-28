@@ -12,33 +12,33 @@ import com.example.guru2.BoardPage_Fragments_Purchase.Goods
 import com.example.guru2.BoardPage_Fragments_Purchase.Womenproducts
 
 
-internal class PurchaseAdapter(var context: Context, fm: FragmentManager, var totalTabs: Int): FragmentPagerAdapter(fm) {
-
-
-    override fun getItem(position: Int): Fragment {
-        return when(position){
-            0 ->{
-                All_purchase()
-            }
-            1 ->{
-                Clothing()
-            }
-            2 ->{
-                Cosmetics()
-            }
-            3 ->{
-                Food_purchase()
-            }
-            4 ->{
-                Goods()
-            }
-            5 ->{
-                Womenproducts()
-            }
-            else -> getItem(position)
-        }
-    }
-    override fun getCount(): Int {
-        return totalTabs
-    }
-}
+//internal class PurchaseAdapter(var context: Context, fm: FragmentManager, var totalTabs: Int): FragmentPagerAdapter(fm) {
+//
+//
+//    override fun getItem(position: Int): Fragment {
+//        return when(position){
+//            0 ->{
+//                All_purchase()
+//            }
+//            1 ->{
+//                Clothing()
+//            }
+//            2 ->{
+//                Cosmetics()
+//            }
+//            3 ->{
+//                Food_purchase()
+//            }
+//            4 ->{
+//                Goods()
+//            }
+//            5 ->{
+//                Womenproducts()
+//            }
+//            else -> getItem(position)
+//        }
+//    }
+//    override fun getCount(): Int {
+//        return totalTabs
+//    }
+//}

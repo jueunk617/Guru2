@@ -10,7 +10,7 @@
         android:id="@+id/addpost_dialog_tv1"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:background="#51CA56"
+        android:background="@color/green"
         android:fontFamily="@font/notoregular"
         android:gravity="center"
         android:text="원하는 공동주문을 선택해 주세요"
