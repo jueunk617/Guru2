@@ -13,3 +13,20 @@
 .externalNativeBuild
 .cxx
 local.properties
+AppData/
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Templates/
+시작 메뉴/
+Documents/My Music/
+Documents/My Pictures/
+Documents/My Videos/
+.android/avd/Nexus_5X_API_33.avd/modem_simulator/etc/modem_simulator/files/numeric_operator.xml
+.android/avd/Nexus_5X_API_33.avd/modem_simulator/iccprofile_for_carrierapitests.xml
+

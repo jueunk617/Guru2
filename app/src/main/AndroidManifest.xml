@@ -15,8 +15,10 @@
         <activity android:name=".BoardAllActivity"></activity>
         <activity android:name=".BoardDeliveryActivity"></activity>
         <activity android:name=".BoardPurchaseActivity"></activity>
+        <activity android:name=".Auth.LoginDialog"
+            tools:ignore="Instantiatable" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Auth.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
