@@ -1,6 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Boardpage_Fragments.All">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/postlayout"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/post_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notoregular"
+                android:text="분류"
+                android:textColor="#333333"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/post_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="5"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:text="시간"
+                android:textColor="#333333"
+                android:textSize="8sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/post_tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notomedium"
+                android:text="제목"
+                android:textColor="#333333" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/post_tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notoregular"
+                android:text="내용"
+                android:textColor="#333333"
+                android:textSize="10sp" />
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:id="@+id/postImageview1"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:id="@+id/postImageview2"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:id="@+id/postImageview3"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/hashteg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hashtegbackground"
+                android:fontFamily="@font/notoregular"
+                android:gravity="center"
+                android:layout_marginRight="3dp"
+                android:text="#해시태그1"
+                android:textColor="#333333"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/hashteg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hashtegbackground"
+                android:fontFamily="@font/notoregular"
+                android:gravity="center"
+                android:layout_marginRight="3dp"
+                android:text="#해시태그2"
+                android:textColor="#333333"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/hashteg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hashtegbackground"
+                android:fontFamily="@font/notoregular"
+                android:gravity="center"
+                android:layout_marginRight="3dp"
+                android:text="#해시태그3"
+                android:textColor="#333333"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/needpeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/speech_icon_scale"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/notolight"
+                android:text="최소인원"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="5"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/view_icon_scale"
+                android:drawablePadding="3dp"
+                android:fontFamily="@font/notolight"
+                android:text="조회수"
+                android:textSize="8sp" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>
