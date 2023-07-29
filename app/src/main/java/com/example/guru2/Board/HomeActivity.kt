@@ -1,24 +1,26 @@
 package com.example.guru2.Board
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-//import android.view.View
+import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import com.example.guru2.R
-//import android.widget.Toast
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-//import androidx.appcompat.widget.AppCompatButton
-//import androidx.cardview.widget.CardView
+import androidx.appcompat.widget.AppCompatButton
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var hp_btndeli: Button
     private lateinit var hp_btnorder: Button
 
-    //private lateinit var baseView: CardView
-    //private lateinit var hiddenView: CardView
-    //private lateinit var hp_enterButton: AppCompatButton
-    //private var isExpanded = false
+    private lateinit var baseView: ConstraintLayout
+    private lateinit var hiddenView: ConstraintLayout
+    private lateinit var hp_enterButton: AppCompatButton
+    private var isExpanded = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,9 +29,9 @@ class HomeActivity : AppCompatActivity() {
         hp_btndeli = findViewById(R.id.hp_btndeli)
         hp_btnorder = findViewById(R.id.hp_btnorder)
 
-        //baseView = findViewById(R.id.baseView)
-        //hiddenView = findViewById(R.id.hiddenView)
-        //hp_enterButton = findViewById(R.id.hp_enterButton)
+        baseView = findViewById(R.id.baseView)
+        hiddenView = findViewById(R.id.hiddenView)
+        hp_enterButton = findViewById(R.id.hp_enterButton)
 
         // 배달주문 메뉴 클릭
         hp_btndeli.setOnClickListener {
@@ -43,29 +45,32 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //baseView.setOnClickListener {
-            //isExpanded = !isExpanded
-            //if (isExpanded) {
-                //expandHiddenView()
-            //} else {
-                //collapseHiddenView()
-            //}
-        //}
+        baseView.setOnClickListener {
+            isExpanded = !isExpanded
+            if (isExpanded) {
+                expandHiddenView()
+            } else {
+                collapseHiddenView()
+            }
+        }
 
-        //hp_enterButton.setOnClickListener {
-            //showMessage("참여가 완료되었습니다.")
-        //}
+        hp_enterButton.setOnClickListener {
+            showMessage("참여가 완료되었습니다.")
+        }
     }
 
-    //private fun expandHiddenView() {
-        //hiddenView.visibility = View.VISIBLE
-    //}
+    @SuppressLint("ResourceType")
+    private fun expandHiddenView() {
+        hiddenView.visibility = View.VISIBLE
+        val animation = AnimationUtils.loadAnimation(this, R.xml.expand_animation)
+        hiddenView.startAnimation(animation)
+    }
 
-    //private fun collapseHiddenView() {
-        //hiddenView.visibility = View.GONE
-    //}
+    private fun collapseHiddenView() {
+        hiddenView.visibility = View.GONE
+    }
 
-    //private fun showMessage(message: String) {
-        //Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    //}
+    private fun showMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
 }
