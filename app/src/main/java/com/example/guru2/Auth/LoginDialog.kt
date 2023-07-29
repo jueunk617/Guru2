@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LoginDialog :AppCompatActivity() {
+class LoginDialog: AppCompatActivity() {
     lateinit var Auth: FirebaseAuth
     lateinit var lp_logindialog_et_id: EditText
     lateinit var lp_logindialog_et_pw: EditText
@@ -55,7 +55,7 @@ class LoginDialog :AppCompatActivity() {
         }
 
         lp_logindialog_iv.setOnClickListener {
-            // x 버튼을 누르면 IntroActivity로 이동
+            // x 버튼을 누르면 MainActivity로 이동
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish() // 이 다이얼로그 액티비티를 종료해서 뒤로 가기 버튼을 눌러 돌아가지 않도록 함
