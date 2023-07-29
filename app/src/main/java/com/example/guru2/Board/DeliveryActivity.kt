@@ -3,7 +3,7 @@ package com.example.guru2.Board
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
-//import android.widget.Button
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guru2.R
@@ -13,17 +13,17 @@ class DeliveryActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.boardpage_delivery)
 
-        val boardpageIv1 = findViewById<ImageView>(R.id.boardpage_iv1)
-        //val frameDeliveryBtn = findViewById<Button>(R.id.frame_delivery)
+        val boardpage_iv1 = findViewById<ImageView>(R.id.boardpage_iv1)
+        val btnaddpost = findViewById<Button>(R.id.btnaddpost)
 
-        boardpageIv1.setOnClickListener {
+        boardpage_iv1.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
-        //frameDeliveryButton.setOnClickListener {
-        //showAddPostDialog()
-        //}
+        btnaddpost.setOnClickListener {
+            showAddPostDialog()
+        }
     }
 
     private fun showAddPostDialog() {

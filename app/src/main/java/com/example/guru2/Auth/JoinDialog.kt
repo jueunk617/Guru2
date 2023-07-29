@@ -61,7 +61,7 @@ class JoinDialog : AppCompatActivity() {
         }
 
         lp_memberdialog_closebtn.setOnClickListener {
-            // x 버튼을 누르면 IntroActivity로 이동
+            // x 버튼을 누르면 MainActivity로 이동
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish() // 이 다이얼로그 액티비티를 종료해서 뒤로 가기 버튼을 눌러 돌아가지 않도록 함
