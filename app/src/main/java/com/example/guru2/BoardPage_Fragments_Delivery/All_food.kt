@@ -35,7 +35,7 @@ class All_food : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_food, container, false)
+        return inflater.inflate(R.layout.fragment_postlist, container, false)
     }
 
 //    companion object {
