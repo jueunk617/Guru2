@@ -8,8 +8,6 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.guru2.Post.PostAdapter
-import com.example.guru2.Post.Post
 import com.example.guru2.R
 
 class PurchaseActivity : AppCompatActivity() {
