@@ -66,66 +66,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/bp_tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tabIndicatorColor="#00FFFFFF"
-            app:tabRippleColor="#00FFFFFF"
-            app:tabSelectedTextColor="@color/green"
-            app:tabTextColor="#CCCCCC" >
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="전체"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="의류"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="화장품"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="음식"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="생필품"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="여성용품"/>
-
-        </com.google.android.material.tabs.TabLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/re_posts"
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:paddingBottom="50dp"
+            android:layout_margin="10dp"
             android:background="@color/white"
+            android:paddingBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bp_tablayout"/>
+            app:layout_constraintTop_toTopOf="@+id/frame_purchase"
+            tools:layout_editor_absoluteX="10dp" />
 
         <FrameLayout
+            android:id="@+id/frame_purchase"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/frame_purchase">
+            android:layout_height="match_parent">
 
         </FrameLayout>
 
