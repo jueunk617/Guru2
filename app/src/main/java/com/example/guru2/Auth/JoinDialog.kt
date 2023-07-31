@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import android.text.InputType
 
 class JoinDialog : AppCompatActivity() {
     private lateinit var Auth: FirebaseAuth
@@ -31,6 +32,9 @@ class JoinDialog : AppCompatActivity() {
         lp_memberdialog_edtname = findViewById(R.id.lp_memberdialog_edtname)
         lp_member_btn = findViewById(R.id.lp_member_btn)
         lp_memberdialog_closebtn = findViewById(R.id.lp_memberdialog_closebtn)
+
+        // 비밀번호 입력 필드에 inputType으로 textPassword 지정
+        lp_memberdialog_edtpw.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
 
         lp_member_btn.setOnClickListener {
             val email = lp_memberdialog_edtemail.text.toString().trim()
@@ -64,8 +68,7 @@ class JoinDialog : AppCompatActivity() {
             // x 버튼을 누르면 MainActivity로 이동
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // 이 다이얼로그 액티비티를 종료해서 뒤로 가기 버튼을 눌러 돌아가지 않도록 함
+            finish()
         }
-
     }
 }

@@ -15,6 +15,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import android.text.InputType
 
 class LoginDialog: AppCompatActivity() {
     lateinit var Auth: FirebaseAuth
@@ -33,6 +34,8 @@ class LoginDialog: AppCompatActivity() {
         lp_logindialog_et_pw = findViewById(R.id.lp_logindialog_et_pw)
         lp_logindialog_btn = findViewById(R.id.lp_logindialog_btn)
         lp_logindialog_iv = findViewById(R.id.lp_logindialog_iv)
+
+        lp_logindialog_et_pw.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
 
         lp_logindialog_btn.setOnClickListener {
             val EmailId = lp_logindialog_et_id.text.toString().trim()
@@ -58,7 +61,7 @@ class LoginDialog: AppCompatActivity() {
             // x 버튼을 누르면 MainActivity로 이동
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // 이 다이얼로그 액티비티를 종료해서 뒤로 가기 버튼을 눌러 돌아가지 않도록 함
+            finish()
         }
     }
 }
