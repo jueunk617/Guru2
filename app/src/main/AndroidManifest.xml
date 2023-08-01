@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.guru2">
+
+    <!-- 기본 설정은 그대로 두세요 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Guru2"
+        tools:targetApi="31">
+
+        <!-- 다음 두 개의 리소스가 프로젝트에 존재하는지 확인해주세요. -->
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/expand_animation" />
+
+        <activity
+            android:name=".Auth.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 기존의 액티비티들은 그대로 둡니다. -->
+        <activity android:name=".Board.HomeActivity" />
+        <activity
+            android:name=".Auth.LoginDialog"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Auth.JoinDialog"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Board.DeliveryActivity"
+            android:label="Delivery Activity" />
+        <activity
+            android:name=".Board.PurchaseActivity"
+            android:label="Purchase Activity" />
+
+        <activity android:name=".Board.AddpostDialog"/>
+        <activity android:name=".Board.WritePostActivity"/>
+        <activity android:name=".Board.DetailPostActivity"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="240dp"
+    android:layout_gravity="center"
+    android:background="@drawable/addpost_dialog_layout">
+
+    <TextView
+        android:id="@+id/addpost_dialog_tv1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/addpost_dialog_textlayout"
+        android:fontFamily="@font/notoregular"
+        android:gravity="center"
+        android:text="원하는 공동주문을 선택해 주세요"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addpost_dialog_btn1"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/addpost_dialog_button"
+        android:drawableTop="@drawable/scooter_icon_scale"
+        android:fontFamily="@font/notoregular"
+        android:paddingTop="20dp"
+        android:text="배달/주문"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpost_dialog_tv1" />
+
+    <Button
+        android:id="@+id/addpost_dialog_btn2"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/addpost_dialog_button"
+        android:backgroundTint="#D5D6D6"
+        android:drawableTop="@drawable/box_icon_scale"
+        android:fontFamily="@font/notoregular"
+        android:paddingTop="20dp"
+        android:text="공동구매"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpost_dialog_tv1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/close" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
