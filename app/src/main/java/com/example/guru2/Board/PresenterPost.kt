@@ -15,7 +15,7 @@ class PresenterPost private constructor() {
         if (postInfo.title.isEmpty() || postInfo.content.isEmpty() || postInfo.password.isEmpty()) return false
 
         if (!postId.isEmpty()) {
-            //case -> 게시글 수정
+            // case -> 게시글 수정
             db.collection(COLLECTION_PATH).document(postId).update("Posts", postInfo)
                 .addOnSuccessListener { }
                 .addOnFailureListener { e: Exception ->
@@ -25,7 +25,7 @@ class PresenterPost private constructor() {
                     )
                 }
         } else {
-            //case -> 게시글 첫 작성
+            // case -> 게시글 첫 작성
             val posts: MutableMap<String, PostDataModel> = HashMap<String, PostDataModel>()
             posts["Posts"] = postInfo
             db.collection(COLLECTION_PATH).add(posts)
@@ -47,7 +47,7 @@ class PresenterPost private constructor() {
             val postsList: ArrayList<PostDataModel> = ArrayList<PostDataModel>()
             if (!queryDocumentSnapshots.isEmpty) {
                 for (snapshot in queryDocumentSnapshots) {
-                    //getId() = documentId를 가져온다
+                    // getId() = documentId를 가져옴
                     var res: HashMap<String?, PostDataModel?>? =
                         HashMap<String?, PostDataModel?>()
                     res = snapshot["Posts"] as HashMap<String?, PostDataModel?>?

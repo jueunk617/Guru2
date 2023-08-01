@@ -96,26 +96,3 @@ public class AdapterReplay extends RecyclerView.Adapter<AdapterReplay.ViewHolder
         void clickDelete(String reply,int position);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

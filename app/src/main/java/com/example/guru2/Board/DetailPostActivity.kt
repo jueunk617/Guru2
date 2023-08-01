@@ -82,11 +82,11 @@ class DetailPostActivity : AppCompatActivity() {
             override fun clickDelete(reply: String?, position: Int) {
                 managePasswordDialog()
 
-                //상단에 취소키를 눌렀을때 다이얼로그창 종료
+                // 상단에 취소키를 눌렀을때 다이얼로그창 종료
                 dlg!!.findViewById<View>(R.id.im_cancel_dialog)
                     .setOnClickListener { v: View? -> dlg!!.dismiss() }
 
-                //댓글 삭제버튼 클릭시
+                // 댓글 삭제버튼 클릭시
                 dlg!!.findViewById<View>(R.id.bt_ok_dialog).setOnClickListener { v: View? ->
                     val password: String
                     val a: Any = postInfo.replies.get(position)
@@ -123,7 +123,7 @@ class DetailPostActivity : AppCompatActivity() {
             finish()
         }
 
-        //댓글 작성 후 보내기 버튼 클릭시 발생 이벤트
+        // 댓글 작성 후 보내기 버튼 클릭시 발생 이벤트
         mBinding.imSendDetail.setOnClickListener { v ->
             managePasswordDialog()
             dlg!!.findViewById<View>(R.id.bt_ok_dialog)
@@ -146,7 +146,7 @@ class DetailPostActivity : AppCompatActivity() {
             Log.i("##INFO", "onViewClick(): replayList.size = " + replyList!!.size)
             //            mBinding.tvRepliesCountDetailPost.setText(replyList.size() + "");
 
-            //댓글 입력시 자동으로 키보드 내림
+            // 댓글 입력시 자동으로 키보드 내림
             val view = this.currentFocus
             if (view != null) {
                 val imm =
@@ -155,7 +155,7 @@ class DetailPostActivity : AppCompatActivity() {
             }
         }
 
-        //삭제버튼 클릭시 게시글 삭제
+        // 삭제버튼 클릭시 게시글 삭제
         mBinding.tvDeleteContent.setOnClickListener { v ->
             managePasswordDialog()
 

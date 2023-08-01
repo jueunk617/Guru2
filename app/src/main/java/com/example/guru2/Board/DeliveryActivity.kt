@@ -25,24 +25,24 @@ class DeliveryActivity : AppCompatActivity() {
     private val COLLECTION_PATH = "FoodPosts"
     private val db = FirebaseFirestore.getInstance()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = BoardpageDeliveryBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        initVariable()
-        getPost()
+        initVariable() // 변수 초기화 및 RecyclerView 설정 메서드 호출
+        getPost() // 게시물 데이터를 Firebase Firestore에서 가져오는 메서드 호출
 
+        // 홈 버튼 클릭 시, HomeActivity로 이동하고 현재 액티비티 종료
         val boardpage_iv1 = findViewById<ImageView>(R.id.boardpage_iv1)
-        val btnaddpost = findViewById<Button>(R.id.btnaddpost)
-
         boardpage_iv1.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
 
+        // 게시물 추가 버튼 클릭 시, AddpostDialog를 띄우고 현재 액티비티 종료
+        val btnaddpost = findViewById<Button>(R.id.btnaddpost)
         btnaddpost.setOnClickListener {
             val i = Intent(this, AddpostDialog::class.java)
             startActivity(i)
@@ -50,12 +50,14 @@ class DeliveryActivity : AppCompatActivity() {
         }
     }
 
+    // 게시물 추가 다이얼로그를 띄우는 메서드
     private fun showAddPostDialog() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.addpost_dialog)
         dialog.show()
     }
 
+    // 변수 초기화 및 RecyclerView 설정 메서드
     private fun initVariable() {
         pList = ArrayList()
         mAdapter = AdapterBoard(pList)
@@ -63,6 +65,7 @@ class DeliveryActivity : AppCompatActivity() {
         mBinding.rePosts.adapter = mAdapter
     }
 
+    // Firebase Firestore에서 게시물 데이터를 가져오는 메서드
     fun getPost() {
         db.collection(COLLECTION_PATH).get()
             .addOnSuccessListener(
@@ -70,7 +73,7 @@ class DeliveryActivity : AppCompatActivity() {
 
                     if (!queryDocumentSnapshots.isEmpty) {
                         for (snapshot in queryDocumentSnapshots) {
-                            //getId() = documentId를 가져온다
+                            // getId() = documentId를 가져온다
                             var res: HashMap<String?, PostDataModel?>? = HashMap()
                             res = snapshot["Posts"] as HashMap<String?, PostDataModel?>?
                             if (res != null) {
@@ -96,8 +99,7 @@ class DeliveryActivity : AppCompatActivity() {
                             }
                         }
                     }
-                    mAdapter.updatePostList(pList)
+                    mAdapter.updatePostList(pList) // 가져온 게시물 데이터로 RecyclerView를 업데이트
                 })
-
     }
 }
